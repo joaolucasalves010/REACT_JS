@@ -1,1 +1,3 @@
-<h1>Estudos em React</h1>
+# Estudos em React <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+
+
