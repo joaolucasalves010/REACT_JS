@@ -4,4 +4,4 @@
 
 # Link do curso
 
-<a href="https://www.udemy.com/course/formacao-front-end-html-css-javascript-react-e/?couponCode=ST8MT40924" target="_blank" />
+<a href="https://www.udemy.com/course/formacao-front-end-html-css-javascript-react-e/?couponCode=ST8MT40924" target="_blank" style="tex-decoration: none">Formação front-end</a>
