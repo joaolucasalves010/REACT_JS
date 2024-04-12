@@ -2,7 +2,7 @@ import './App.css'
 
 // http://localhost:5173/ site localhost
 
-import FirstComponent from './components/FirstComponent'
+import FirstComponent from './components/FirstComponent' // importando component
 
 function App() {
   return (
