@@ -1,3 +1,5 @@
+// 1 - Criando component
+
 function FirstComponent() {
   return (
     <div>
@@ -6,4 +8,4 @@ function FirstComponent() {
   )
 }
 
-export default FirstComponent
+export default FirstComponent // Exportando component
