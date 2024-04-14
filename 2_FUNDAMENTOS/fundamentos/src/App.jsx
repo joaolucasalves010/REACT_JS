@@ -2,7 +2,10 @@ import './App.css'
 
 
 import FirstComponent from './components/FirstComponent' // 2 - Importando component
-import TemplateExpression from './components/TemplateExpression' // Importando component Template Expression
+
+import TemplateExpression from './components/TemplateExpression' // 4 - Importando component Template Expression
+
+import MyComponent from './components/MyComponent' // 5 - Hierarquia
 
 function App() {
   return (      
@@ -11,6 +14,7 @@ function App() {
         <h1>Fundamentos em ReactJs!</h1>
         <FirstComponent />
         <TemplateExpression />
+        <MyComponent />
       </div>
   )
 }
