@@ -7,6 +7,15 @@ const Events = () => {
     console.log(e)
   }
 
+  // 8 - Função de renderização
+  const renderSomething = (x) => {
+    if (x) {
+      return <h1>Renderizando isso!</h1>
+    }else {
+      return <h1>Renderizando outra coisa!</h1>
+    }
+  }
+
   return (
     <div>
       <div>
@@ -18,6 +27,9 @@ const Events = () => {
       <div>
         <button onClick={handleClick}>Evento com função</button>
       </div>
+      {/* 8 - função com */}
+      {renderSomething(true)}
+      {renderSomething(false)}
     </div>
   )
 }
