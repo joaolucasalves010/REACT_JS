@@ -8,7 +8,7 @@ const ListRender = () => {
   const [users, setUsers] = useState([
     {id: 1, name: "João Lucas", age: 15},
     {id: 2, name: "Pedro", age: 17},
-    {id: 3, name: 'Matheus Alves', age: 16}
+    {id: 3, name: 'Matheus Alves', age: 17}
   ])
 
   return (
