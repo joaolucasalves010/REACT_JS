@@ -10,6 +10,9 @@ import Data from './components/Data'
 // 4 - Renderização de lista
 import ListRender from './components/ListRender'
 
+// 7 - Renderização condicional
+import ConditionalRender from './components/ConditionalRender'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -25,6 +28,7 @@ function App() {
         <Data />
         {/* 4 - ListRender */}
         <ListRender />
+        <ConditionalRender />
       </div>
     </>
   )
