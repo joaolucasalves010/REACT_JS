@@ -16,6 +16,9 @@ import ConditionalRender from './components/ConditionalRender'
 //  8 - props
 import ShowUserName from './components/ShowUserName'
 
+// 9 - Desestruturando props
+import CarComponent from './components/CarComponent'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -34,6 +37,11 @@ function App() {
         <ConditionalRender />
         {/* 8 - Props */}
         <ShowUserName name='João' />
+        {/* 9 - Desestruturando props */}
+        <CarComponent model={'SUV'} year={2013} brand={'Ferrari'}/>
+        {/* 10 - Reaproveitamento de components */}
+        <CarComponent model={'Family'} year={2020} brand={'Jeep'} />
+        <CarComponent model={'SUV'} year={1998} brand={'Fiat'} />
       </div>
     </>
   )
