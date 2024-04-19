@@ -13,6 +13,9 @@ import ListRender from './components/ListRender'
 // 7 - Renderização condicional
 import ConditionalRender from './components/ConditionalRender'
 
+//  8 - props
+import ShowUserName from './components/ShowUserName'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -29,6 +32,8 @@ function App() {
         {/* 4 - ListRender */}
         <ListRender />
         <ConditionalRender />
+        {/* 8 - Props */}
+        <ShowUserName name='João' />
       </div>
     </>
   )
