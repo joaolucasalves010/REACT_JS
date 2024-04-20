@@ -18,6 +18,12 @@ import ShowUserName from './components/ShowUserName'
 
 // 9 - Desestruturando props
 import CarComponent from './components/CarComponent'
+// 11 - Renderização de lista com reaproveitamento de component
+const cars = [
+  {id: 1, brand: 'Ferrari', model: 'Sport', year: 2023},
+  {id: 2, brand: 'KIA', model: 'Family', year: 2019},
+  {id: 3, brand: 'Jeep', model: 'SUV', year: 2023}
+]
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,6 +48,10 @@ function App() {
         {/* 10 - Reaproveitamento de components */}
         <CarComponent model={'Family'} year={2020} brand={'Jeep'} />
         <CarComponent model={'SUV'} year={1998} brand={'Fiat'} />
+        {/* 11 - Renderização de lista com components */}
+        {cars.map((car) => (
+          <CarComponent key={car.id} brand={car.brand} year={car.year} model={car.model}/>
+        ))}
       </div>
     </>
   )
