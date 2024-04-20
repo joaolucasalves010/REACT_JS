@@ -25,6 +25,9 @@ const cars = [
   {id: 3, brand: 'Jeep', model: 'SUV', year: 2023}
 ]
 
+// 12 - Fragments
+import Fragment from './components/Fragment'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -52,6 +55,8 @@ function App() {
         {cars.map((car) => (
           <CarComponent key={car.id} brand={car.brand} year={car.year} model={car.model}/>
         ))}
+        {/* 12 - Fragment */}
+        <Fragment />
       </div>
     </>
   )
