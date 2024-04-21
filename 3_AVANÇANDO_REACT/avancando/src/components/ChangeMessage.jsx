@@ -1,13 +1,14 @@
-const ChangeMessageState = ({ handleMessage }) => {
-  const messages = ["Oi", "Olá", "Tudo bem?"];
+const ChangeMessage = ( { handleMessage } ) => {
+
+  const messages = ['Olá', 'Tudo Bem?', 'Oi']
 
   return (
-    <div>
+    <div> 
       <button onClick={() => handleMessage(messages[0])}>1</button>
       <button onClick={() => handleMessage(messages[1])}>2</button>
       <button onClick={() => handleMessage(messages[2])}>3</button>
     </div>
-  );
-};
+  )
+}
 
-export default ChangeMessageState;
+export default ChangeMessage

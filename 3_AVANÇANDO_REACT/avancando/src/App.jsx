@@ -38,20 +38,18 @@ function showMessage() {
   console.log('Olá!')
 }
 
-// 15 - State lift
 import Message from './components/Message'
-
-const [message, setMessage] = useState();
-
-const handleMessage = (msg) => {
-  setMessage(msg);
-};
 
 import ChangeMessage from './components/ChangeMessage'
 
 function App() {
   const [count, setCount] = useState(0)
+  // 15 - State lift
+const [message, setMessage] = useState('')
 
+const handleMessage = (msg) => {
+  setMessage(msg)
+}
   return (
     <>
       <div className="App" style={{paddingBottom: '500px'}}>

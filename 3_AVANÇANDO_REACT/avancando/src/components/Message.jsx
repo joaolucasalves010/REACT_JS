@@ -1,9 +1,9 @@
-const MessageState = ({ msg }) => {
+const Message = ({msg}) => {
   return (
     <div>
       <p>A mensagem é: {msg}</p>
     </div>
-  );
-};
+  )
+}
 
-export default MessageState;
+export default Message
