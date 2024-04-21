@@ -38,6 +38,17 @@ function showMessage() {
   console.log('Olá!')
 }
 
+// 15 - State lift
+import Message from './components/Message'
+
+const [message, setMessage] = useState();
+
+const handleMessage = (msg) => {
+  setMessage(msg);
+};
+
+import ChangeMessage from './components/ChangeMessage'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -73,6 +84,9 @@ function App() {
         </Container>
         {/* 14 - Função em prop */}
         <ExecuteFunction MyFunction={showMessage} />
+        {/* 15 - State lift */}
+        <Message msg={message}/>
+        <ChangeMessage handleMessage={handleMessage}/>
       </div>
     </>
   )
