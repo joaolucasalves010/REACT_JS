@@ -31,6 +31,13 @@ import Fragment from './components/Fragment'
 // 13 - Children pop
 import Container from './components/Container'
 
+// 14 - Função em prop
+import ExecuteFunction from './components/ExecuteFunction'
+
+function showMessage() {
+  console.log('Olá!')
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -64,6 +71,8 @@ function App() {
         <Container>
           <p>Alguma coisa</p>
         </Container>
+        {/* 14 - Função em prop */}
+        <ExecuteFunction MyFunction={showMessage} />
       </div>
     </>
   )
