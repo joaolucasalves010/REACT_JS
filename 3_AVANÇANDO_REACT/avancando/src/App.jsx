@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import './App.css'
 
 // 2 - Imagens em assets
@@ -27,6 +27,9 @@ const cars = [
 
 // 12 - Fragments
 import Fragment from './components/Fragment'
+
+// 13 - Children pop
+import Container from './components/Container'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -57,6 +60,10 @@ function App() {
         ))}
         {/* 12 - Fragment */}
         <Fragment />
+        {/* 13 - Children */}
+        <Container>
+          <p>Alguma coisa</p>
+        </Container>
       </div>
     </>
   )
