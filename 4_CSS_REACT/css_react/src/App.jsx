@@ -8,6 +8,8 @@ import MyComponent from './components/MyComponent'
 
 function App() {
   const [count, setCount] = useState(0)
+  // 4 - CSS inline dinâmico
+  const n = 15
 
   return (
     <>
@@ -19,6 +21,10 @@ function App() {
         <p>Pegou o css do component acima</p>
         {/* 3 - Inline style */}
         <p style={{color: 'blue', padding: "2rem", border: '1px solid #000', fontWeight: 'bold'}}>Este elemento possui estilos inline</p>
+        {/* 4 - Estilos inline dinâmico */}
+        <h2 style={n > 10 ? { color: 'purple' } : { color: 'magenta' }}>
+          CSS dinâmico
+        </h2>
       </div>
     </>
   )
