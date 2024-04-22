@@ -6,6 +6,9 @@ import './App.css'
 // 2 - css de component
 import MyComponent from './components/MyComponent'
 
+// 6 - CSS modules
+import Title from './components/Title'
+
 function App() {
   const [count, setCount] = useState(0)
   // 4 - CSS inline dinâmico
@@ -13,6 +16,8 @@ function App() {
 
   // 5 - Classes dinâmicas
   const redTitle = true
+
+  // 6 - CSS modules
 
   return (
     <>
@@ -30,6 +35,8 @@ function App() {
         </h2>
         {/* 5 - Classes dinâmica */}
         <h2 className={redTitle ? 'red-title' : 'title'}>Este elemento vai ter uma classe!</h2>
+        {/* 6 - CSS modules */}
+        <Title />
       </div>  
     </>
   )
