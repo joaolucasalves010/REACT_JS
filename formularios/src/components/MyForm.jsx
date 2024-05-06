@@ -12,12 +12,24 @@ const myForm = () => {
     setName(e.target.value);
   };
 
+  // 5 - Envio de form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name == undefined || email == undefined) {
+      console.log("Indefinido");
+    }
+
+    console.log(name, email);
+  };
+
   console.log(name, email);
 
   return (
     <div>
       {/* 1 - Criação de form */}
-      <form>
+      {/* 5 - Envio de formulário */}
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
           <input
@@ -35,7 +47,7 @@ const myForm = () => {
             type="text"
             name="email"
             placeholder="Digite o seu e-mail"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <input type="submit" value="Enviar" />
