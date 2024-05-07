@@ -21,6 +21,10 @@ const myForm = ({ userName, userEmail }) => {
     }
 
     console.log(name, email);
+
+    // 6 - Limpando formulários
+    setName("");
+    setEmail("");
   };
 
   console.log(name, email);
