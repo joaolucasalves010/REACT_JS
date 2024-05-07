@@ -8,6 +8,10 @@ const myForm = ({ userName, userEmail }) => {
 
   const [email, setEmail] = useState(userEmail);
 
+  const [bio, setBio] = useState("");
+
+  const [role, setRole] = useState("");
+
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -20,14 +24,14 @@ const myForm = ({ userName, userEmail }) => {
       console.log("Indefinido");
     }
 
-    console.log(name, email);
+    console.log(name, email, bio, role);
 
     // 6 - Limpando formulários
     setName("");
     setEmail("");
+    setBio("");
+    setRole("");
   };
-
-  console.log(name, email);
 
   return (
     <div>
@@ -57,6 +61,29 @@ const myForm = ({ userName, userEmail }) => {
             // 6 - Controlled input
             value={email || ""}
           />
+        </label>
+        {/* 8 - Textarea */}
+        <label>
+          <span>Bio:</span>
+          <textarea
+            name="bio"
+            placeholder="Descrição do usuário"
+            onChange={(e) => setBio(e.target.value)}
+            value={bio}
+          ></textarea>
+        </label>
+        {/* 9 - select */}
+        <label>
+          <span>Função no sistema:</span>
+          <select
+            name="role"
+            onChange={(e) => setRole(e.target.value)}
+            value={role}
+          >
+            <option value="user">Usuário</option>
+            <option value="editor">Editor</option>
+            <option value="admin">Admin</option>
+          </select>
         </label>
         <input type="submit" value="Enviar" />
       </form>

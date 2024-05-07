@@ -11,7 +11,10 @@ function App() {
     <>
       <div>
         <h1>Form em React</h1>
-        <MyForm userEmail={"ylucasslalves@gmail.com"} userName={"João Lucas"} />
+        <MyForm
+          userEmail={"emailexample@gmail.com"}
+          userName={"Name Example"}
+        />
       </div>
     </>
   );
