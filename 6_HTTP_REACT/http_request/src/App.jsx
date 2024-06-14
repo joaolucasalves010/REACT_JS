@@ -19,6 +19,33 @@ function App() {
     getData();
   }, []);
 
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!name || !price) return;
+
+    const product = {
+      name,
+      price,
+    };
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+
+    // 3 - Carregamento dinâmico
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+  };
+
   return (
     <div className="App">
       <h1>Http em React</h1>
@@ -30,6 +57,28 @@ function App() {
           </li>
         ))}
       </ul>
+      {/* 2 - Envio de Dados */}
+      <div className="add-product">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Nome</span>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+          <label>
+            <span>Preço</span>
+            <input
+              type="text"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
+          </label>
+          <input type="submit" value={"Enviar"} />
+        </form>
+      </div>
     </div>
   );
 }
