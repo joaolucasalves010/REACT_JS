@@ -1,23 +1,27 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import { useFetch } from "./hooks/useFetch";
 
 const url = "http://localhost:3000/products";
 
 function App() {
   // 1 - Resgatando dados
   const [products, setProducts] = useState([]);
+  // 4 - Custom hook para o fetch
 
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch(url);
+  const { data: items } = useFetch(url);
 
-      const data = await response.json();
+  // useEffect(() => {
+  //   async function getData() {
+  //     const response = await fetch(url);
 
-      setProducts(data);
-    }
+  //     const data = await response.json();
 
-    getData();
-  }, []);
+  //     setProducts(data);
+  //   }
+
+  //   getData();
+  // }, []);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -51,11 +55,12 @@ function App() {
       <h1>Http em React</h1>
       {/* 1 - Resgate de dados */}
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - R$ {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - R$ {product.price}
+            </li>
+          ))}
       </ul>
       {/* 2 - Envio de Dados */}
       <div className="add-product">
